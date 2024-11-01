@@ -12,6 +12,8 @@
     display: none;
 }
 
+/* MENU */
+
 .menu__container{
     position: fixed;
     bottom: 0;
@@ -33,6 +35,14 @@
 .menu__lista:nth-child(3),
 .menu__lista:nth-child(4){
     display: none;
+}
+
+.menu__itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
 }
 
 /* SECAO SUPERIOR */
@@ -62,19 +72,53 @@
     .rodape__container{
         justify-content: space-between;
     }
+
+/* MENU */
+    .menu__container{
+        position: fixed;
+        top: 80px;
+        width: 74px;
+        height: 100%;
+    }
+    .menu__lista{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        height: 100%;
+    }
+
 }
 
 @media(min-width: 1440px){
 /* CABECALHO */
-    .cabecalho__container{
-        padding: 0 50px;
-    }
+    
 /* SECAO SUPERIOR */
-    .superior__secao__container{
-        gap: 30px;
+    
+/* MENU */
+    .menu__container{
+        position: fixed;
+        top: 80px;
+        width: 247px;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 20px;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+    .menu__itens{
+        flex-direction: row;
+        justify-content: flex-start;
     }
 /* RODAPÉ */
-    .rodape__container{
-        flex-direction: row;
-    }
+    
+
 }
